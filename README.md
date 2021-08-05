@@ -1,10 +1,10 @@
-# Testimonials Gird section
+# Testimonials Grid Section
 
 ![logo testimonials](./images/favicon-32x32.png)
 
 ## About
 
-This is a challenges when you practice your knowlodge about **CSS Grid**. The Technologies used in this challenges are ***HTML, CSS***
+This is a challenges when you practice your knowledge about **CSS Grid**. The Technologies used in this challenges are ***HTML, CSS***
 
 ## Links Site
 
