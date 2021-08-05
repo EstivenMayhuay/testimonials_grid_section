@@ -1,0 +1,232 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-family: var(--fontMain);
+}
+
+:root {
+  /* colors */
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* typography */
+  --fontMain: 'Barlow Semi Condensed', sans-serif;
+
+  /* size */
+  --wCard: 280px;
+  --wIconPerson: 32px;
+}
+
+body {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--light-grayish-blue);
+  padding: 48px 16px;
+}
+
+.main {
+  /*outline: 2px solid blue;*/
+  display: grid;
+  gap: 32px;
+  width: calc(100% - 32px);
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Card Person */
+
+[class*="card-"] {
+  /*outline: 2px solid red;*/
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px -4px var(--very-dark-blackish-blue);
+  transition: all .5s linear;
+}
+
+.card-1 {
+  position: relative;
+  background: var(--moderate-violet);
+  z-index: 40;
+}
+
+.card-2 {
+ background: var(--very-dark-grayish-blue);
+}
+
+.card-4 {
+  background: var(--very-dark-blackish-blue);
+}
+
+.card-3, .card-5 {
+  background: var(--White);
+}
+
+.cardPerson {
+  /*outline: 2px solid green;*/
+  margin: 0 0 24px 0;
+}
+
+.cardPerson .person, .cardPerson .info{
+  display: inline-block;
+}
+
+.cardPerson .person {
+  width: var(--wIconPerson);
+  height: var(--wIconPerson);
+  margin: 0 16px 0 0;
+  vertical-align: text-bottom;
+  transition: all .5s linear;
+}
+
+.cardPerson .info h4 {
+  font-size: 14px;
+}
+
+.cardPerson .info span {
+  font-size: 12px;
+}
+
+.logoQuote {
+  /*outline: 2px solid blue;*/
+  position: absolute;
+  top: 0;
+  right: 16px;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+/* Message */
+
+.message__title{
+  font-size: 20px;
+  margin: 0 0 16px 0;
+}
+
+.message__desc {
+  /*outline: 1px solid red;*/
+  font-size: 13px;
+  line-height: 1.6rem;
+}
+
+/* General class */
+
+.patrick {
+  border: 2px solid var(--moderate-violet);
+}
+
+.daniel {
+  border: 2px solid var(--very-dark-grayish-blue);
+}
+
+.adjustImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rounderImg {
+  /*border: 1px solid white;*/
+  border-radius: 50%;
+}
+
+.text-white-normal, .text-white-strong, .text-white-opacity-normal, .text-white-opacity-strong, .text-dark-blue-strong, .text-dark-blue-normal, .text-dark-blue-opacity-normal, .text-dark-blue-opacity-strong {
+  font-weight: 500;
+}
+
+.text-white-normal, .text-white-strong, .text-white-opacity-normal, .text-white-opacity-strong {
+  color: var(--White);
+}
+
+.text-dark-blue-strong, .text-dark-blue-normal, .text-dark-blue-opacity-normal, .text-dark-blue-opacity-strong {
+  color: var(--very-dark-blackish-blue);
+}
+
+.text-white-strong, .text-dark-blue-strong {
+  font-weight: 600;
+}
+
+.text-white-opacity-strong, .text-dark-blue-opacity-strong {
+  opacity: 70%;
+}
+
+.text-white-opacity-normal, .text-dark-blue-opacity-normal {
+  opacity: 50%;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .gridLayout {
+    /*outline: 2px solid blue;*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+  }
+
+  .card-1 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .card-2 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .card-3 {
+    /*background: red;*/
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .card-4 {
+    /*background: red;*/
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  .card-5 {
+    /*background: red;*/
+    grid-column: 4;
+    grid-row: 1 / 3;
+  }
+
+  /* animations */
+
+  [class*="card-"]:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  .card-1:active ~ .card-2, .card-1:active ~ .card-3, .card-1:active ~ .card-4, .card-1:active ~ .card-5 {
+    opacity: 0.25;
+  }
+
+  .card-2:active ~ .card-3, .card-2:active ~ .card-1, .card-2:active ~ .card-4, .card-2:active ~ .card-5 {
+    opacity: 0.25;
+  }
+
+  .card-3:active ~ .card-1, .card-3:active ~ .card-2, .card-3:active ~ .card-4, .card-3:active ~ .card-5 {
+    opacity: 0.25;
+  }
+active
+  .card-4:active ~ .card-1, .card-4:active ~ .card-2, .card-4:active ~ .card-3, .card-4:active ~ .card-5 {
+    opacity: 0.25;
+  }
+
+  .person:hover {
+    transform: scale(1.5);
+  }
+}
+
