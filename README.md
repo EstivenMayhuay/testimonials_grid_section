@@ -8,7 +8,7 @@ This is a challenges when you practice your knowledge about **CSS Grid**. The Te
 
 ## Links Site
 
-- Site: [https://estivenm99.github.io/testimonials_grid_section/](https://estivenm99.github.io/testimonials_grid_section/)
+- Site: [https://estivenmayhuay.github.io/testimonials_grid_section/](https://estivenmayhuay.github.io/testimonials_grid_section/)
 
 ## Views
 
